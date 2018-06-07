@@ -22,6 +22,18 @@
 		B64995EF20C9064300BAEAED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B64995F220C9064300BAEAED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B64995F420C9064300BAEAED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B64995FB20C90FB900BAEAED /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B64995FC20C90FB900BAEAED /* UIButtonX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonX.swift; sourceTree = "<group>"; };
+		B64995FD20C90FB900BAEAED /* UIImageViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewX.swift; sourceTree = "<group>"; };
+		B64995FE20C90FB900BAEAED /* UILabelX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelX.swift; sourceTree = "<group>"; };
+		B64995FF20C90FB900BAEAED /* UISliderX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISliderX.swift; sourceTree = "<group>"; };
+		B649960020C90FB900BAEAED /* UITextFieldX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldX.swift; sourceTree = "<group>"; };
+		B649960120C90FB900BAEAED /* UITextViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewX.swift; sourceTree = "<group>"; };
+		B649960220C90FB900BAEAED /* UIViewAnchorPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewAnchorPoint.swift; sourceTree = "<group>"; };
+		B649960320C90FB900BAEAED /* UIViewControllerX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerX.swift; sourceTree = "<group>"; };
+		B649960420C90FB900BAEAED /* UIViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
+		B649960520C90FB900BAEAED /* UIViewXRadialGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewXRadialGradient.swift; sourceTree = "<group>"; };
+		B649960620C90FB900BAEAED /* UIVisualEffectViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVisualEffectViewX.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				B64995E720C9064300BAEAED /* MotionEffect */,
+				B64995FA20C90FB900BAEAED /* DesignableX */,
 				B64995E620C9064300BAEAED /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,6 +75,25 @@
 				B64995F420C9064300BAEAED /* Info.plist */,
 			);
 			path = MotionEffect;
+			sourceTree = "<group>";
+		};
+		B64995FA20C90FB900BAEAED /* DesignableX */ = {
+			isa = PBXGroup;
+			children = (
+				B64995FB20C90FB900BAEAED /* Extensions.swift */,
+				B64995FC20C90FB900BAEAED /* UIButtonX.swift */,
+				B64995FD20C90FB900BAEAED /* UIImageViewX.swift */,
+				B64995FE20C90FB900BAEAED /* UILabelX.swift */,
+				B64995FF20C90FB900BAEAED /* UISliderX.swift */,
+				B649960020C90FB900BAEAED /* UITextFieldX.swift */,
+				B649960120C90FB900BAEAED /* UITextViewX.swift */,
+				B649960220C90FB900BAEAED /* UIViewAnchorPoint.swift */,
+				B649960320C90FB900BAEAED /* UIViewControllerX.swift */,
+				B649960420C90FB900BAEAED /* UIViewX.swift */,
+				B649960520C90FB900BAEAED /* UIViewXRadialGradient.swift */,
+				B649960620C90FB900BAEAED /* UIVisualEffectViewX.swift */,
+			);
+			path = DesignableX;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,11 +309,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LGG4PHM8YL;
 				INFOPLIST_FILE = MotionEffect/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hi-yuki.MotionEffect";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -292,11 +325,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LGG4PHM8YL;
 				INFOPLIST_FILE = MotionEffect/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hi-yuki.MotionEffect";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

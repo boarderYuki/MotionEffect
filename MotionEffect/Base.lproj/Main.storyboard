@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,63 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MotionEffect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="jrV-vh-IRd">
+                                <rect key="frame" x="-50" y="-30" width="420" height="648"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLP-FP-O0z">
+                                <rect key="frame" x="60" y="398" width="200" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRF-Mo-pt6" customClass="UIButtonX">
+                                        <rect key="frame" x="80.5" y="30.5" width="40" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="4KA-Yf-5f7"/>
+                                            <constraint firstAttribute="height" constant="40" id="heU-GL-3n5"/>
+                                        </constraints>
+                                        <state key="normal" image="arrow_right"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="BJX-r7-Qsv"/>
+                                    <constraint firstItem="MRF-Mo-pt6" firstAttribute="centerY" secondItem="tLP-FP-O0z" secondAttribute="centerY" id="Mnh-4u-GFT"/>
+                                    <constraint firstItem="MRF-Mo-pt6" firstAttribute="centerX" secondItem="tLP-FP-O0z" secondAttribute="centerX" id="Tkq-t2-xVD"/>
+                                    <constraint firstAttribute="height" constant="100" id="YQt-qg-zbX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tLP-FP-O0z" secondAttribute="bottom" constant="70" id="2zp-Jr-19k"/>
+                            <constraint firstItem="jrV-vh-IRd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-50" id="5JD-CI-gsX"/>
+                            <constraint firstItem="jrV-vh-IRd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-50" id="5RY-Fw-oMB"/>
+                            <constraint firstItem="tLP-FP-O0z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JVh-4T-KBT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jrV-vh-IRd" secondAttribute="bottom" constant="-50" id="m8I-q5-DYw"/>
+                            <constraint firstItem="jrV-vh-IRd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="50" id="mcT-ZB-wJQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="jrV-vh-IRd" id="XGD-DA-KUe"/>
+                        <outlet property="imageViewWithButton" destination="tLP-FP-O0z" id="e7Y-dy-9KI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow_right" width="12" height="16"/>
+        <image name="bg1" width="1771" height="1107"/>
+    </resources>
 </document>
